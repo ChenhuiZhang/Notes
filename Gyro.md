@@ -4,7 +4,7 @@
 
 ## Module
 
-- [ICM20600] (https://www.invensense.com/wp-content/uploads/2015/12/DS-000184-ICM-20600-v1.0.pdf)
+- [ICM20600](https://www.invensense.com/wp-content/uploads/2015/12/DS-000184-ICM-20600-v1.0.pdf)
 
 ## Code
 
@@ -13,7 +13,7 @@
 
 ## Framework
 
-- [IIO] (https://wiki.analog.com/software/linux/docs/iio/iio)
+- [IIO](https://wiki.analog.com/software/linux/docs/iio/iio)
 
 ## Interfaces
 
