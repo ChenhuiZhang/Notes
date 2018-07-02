@@ -6,11 +6,14 @@
 
 1. SRC_URI
 
+To apply patch for specific *machine*:
+
 > SRC_URI += "file://foo.patch"
+
 > SRC_URI_append_machine += "file://bar.patch"
 
 either:
 
 > SRC_URI_machine += "file://foo.patch file://bar.patch"
 
-3. 
+2. 
