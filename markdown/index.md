@@ -5,7 +5,7 @@
 ## Vim
 
 ## Gyro
-* [ICM20600](Gyro.md)
+* [ICM20600](gyro.md)
 
 ## Yocto
 * [Yocto](yocto.md)
