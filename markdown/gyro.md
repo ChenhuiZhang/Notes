@@ -17,12 +17,30 @@
 
 ## Interfaces
 
-The Gyro driver provide the standard iio interface for below data:
+The Gyro driver provide the standard iio channels as below:
 
-- Gyroscope - X/Y/Z
-- Temperature sensor
 - Accelerometer - X/Y/Z
+- Temperature sensor
+- Gyroscope - X/Y/Z
+- Timestamp
 
+The accelrometer channel also support the event feature which used as WoM in
+ICM20600. 
+
+The temperature sensor also can export as a HWMON interface as below:
+
+```
+186         iio-hwmon {
+187                 compatible = "iio-hwmon";
+188                 io-channels = <&gyro 3>;
+189         };
+```
+
+The temperature value can be read from:
+
+```
+cat /sys/class/hwmon/hwmon0/temp1_input
+```
 
 ## Tools
 
@@ -40,7 +58,6 @@ The Gyro driver provide the standard iio interface for below data:
   ```
   
   - Enable only temperature sensor and anglvel_z channel:
-  
   ```
   echo 1 > /sys/bus/iio/devices/iio\:device0/scan_elements/in_temp_en
   echo 1 > /sys/bus/iio/devices/iio\:device0/scan_elements/in_anglvel_z_en
