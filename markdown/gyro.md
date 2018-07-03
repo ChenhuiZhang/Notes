@@ -35,6 +35,7 @@ The Gyro driver provide the standard iio interface for below data:
   ```
   
   - Run
+  
   Enable all channels and read the data in 100 times:
   ```
   iio_generic_buffer -a -N 0 -c 100
