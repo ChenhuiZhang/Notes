@@ -34,19 +34,28 @@ The Gyro driver provide the standard iio interface for below data:
   make CROSS_COMPILE=aarch64-linux-gnu-
   ```
   
-  - Run
-  
-  * Enable all channels and read the data in 100 times:
+  - Enable all channels and read the data in 100 times:
   ```
   iio_generic_buffer -a -N 0 -c 100
   ```
   
-  * Enable only temperature sensor and anglvel_z channel:
+  - Enable only temperature sensor and anglvel_z channel:
   
   ```
   echo 1 > /sys/bus/iio/devices/iio\:device0/scan_elements/in_temp_en
   echo 1 > /sys/bus/iio/devices/iio\:device0/scan_elements/in_anglvel_z_en
   iio_generic_buffer -N 0 -c 100
+  ```
+  
+  - Enable WoM in axis X and set the threshold to 100:
+  ```
+  echo 1 > /sys/bus/iio/devices/iio\:device0/events/in_accel_x_thresh_either_en
+  echo 100 > /sys/bus/iio/devices/iio\:device0/events/in_accel_x_thresh_either_value
+  ```
+  
+  Then you can monitor the event from X axis is the motion is over threshold:
+  ```
+  iio_event_monitor icm20600
   ```
   
 - [libiio](https://wiki.analog.com/resources/tools-software/linux-software/libiio)
