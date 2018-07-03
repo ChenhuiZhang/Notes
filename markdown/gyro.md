@@ -23,4 +23,20 @@ The Gyro driver provide the standard iio interface for below data:
 - Temperature sensor
 - Accelerometer - X/Y/Z
 
+## Tools
+
+- tools/iio in kernel
+
+  - Build
+  ```
+  make CROSS_COMPILE=aarch64-linux-gnu-
+  ```
+  
+  - Run
+  
+  iio_generic_buffer -a -N 0 -c 100
+  
+- [libiio](https://wiki.analog.com/resources/tools-software/linux-software/libiio)
+- [iio_oscilloscope](https://wiki.analog.com/resources/tools-software/linux-software/iio_oscilloscope)
+
 
