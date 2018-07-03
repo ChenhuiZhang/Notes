@@ -36,12 +36,12 @@ The Gyro driver provide the standard iio interface for below data:
   
   - Run
   
-  Enable all channels and read the data in 100 times:
+  * Enable all channels and read the data in 100 times:
   ```
   iio_generic_buffer -a -N 0 -c 100
   ```
   
-  Enable only temperature sensor and anglvel_z channel:
+  * Enable only temperature sensor and anglvel_z channel:
   
   ```
   echo 1 > /sys/bus/iio/devices/iio\:device0/scan_elements/in_temp_en
