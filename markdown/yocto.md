@@ -16,4 +16,6 @@ either:
 
 > SRC_URI_machine += "file://foo.patch file://bar.patch"
 
-2. 
+2. dependencies
+
+bitbake -g recipe-name -u taskexp
