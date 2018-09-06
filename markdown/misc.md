@@ -41,3 +41,11 @@ matplotlib.get_backend()
 或
 
 matplotlib.pyplot.get_backend()
+
+# Wildcard filter in Wireshark
+**eth.src[0:3] == 00:20:4a**
+
+# Change the git repo url from git://* to https://*
+```
+git config --global url.https://github.com/.insteadOf git://github.com/
+```

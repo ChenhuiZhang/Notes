@@ -1,7 +1,6 @@
 # Busctl usage for dbus
 
 [Man_CH](http://www.jinbuguo.com/systemd/busctl.html)
-
 [Man_En](https://www.freedesktop.org/software/systemd/man/busctl.html)
 
 * list all dbus service on system
