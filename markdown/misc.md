@@ -49,3 +49,13 @@ matplotlib.pyplot.get_backend()
 ```
 git config --global url.https://github.com/.insteadOf git://github.com/
 ```
+
+# Systemd-analyze
+```
+# systemd-analyze blame
+# systemd-analyze critical-chain
+# systemd-analyze plot > boot_analysis.svg
+# systemd-analyze blame -H root@192.168.77.5
+# systemd-analyze critical-chain -H root@192.168.77.5
+# man systemd-analyze
+```
