@@ -59,3 +59,15 @@ git config --global url.https://github.com/.insteadOf git://github.com/
 # systemd-analyze critical-chain -H root@192.168.77.5
 # man systemd-analyze
 ```
+
+# kmemleak
+
+```
+CONFIG_HAVE_DEBUG_KMEMLEAK=y
+CONFIG_DEBUG_KMEMLEAK=y
+CONFIG_DEBUG_KMEMLEAK_EARLY_LOG_SIZE=8000
+# CONFIG_DEBUG_KMEMLEAK_TEST is not set
+# CONFIG_DEBUG_KMEMLEAK_DEFAULT_OFF is not set
+CONFIG_DEBUG_KMEMLEAK_WARN=y
+```
+[link](https://www.kernel.org/doc/html/latest/dev-tools/kmemleak.html)
