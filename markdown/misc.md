@@ -71,3 +71,33 @@ CONFIG_DEBUG_KMEMLEAK_EARLY_LOG_SIZE=8000
 CONFIG_DEBUG_KMEMLEAK_WARN=y
 ```
 [link](https://www.kernel.org/doc/html/latest/dev-tools/kmemleak.html)
+
+# scp in ipv6
+scp lg@\[2101:da8:a000:12:bc26:9915:4b1d:64cc\]:/home/lg/example.c ~/home/lg/src
+
+# Take screenshot in Mplayer
+
+Enable screenshot filter
+When we want to take screenshots when playing video, first we need to set the “-vf screenshot” option:
+
+```
+$ mplayer -vf screenshot video.file
+```
+
+If we want to enable the screenshot filter by default, we may put the option by adding one line into ~/.mplayer/config :
+
+```
+vf=screenshot
+```
+
+To take a single screenshot
+Just press ‘s‘.
+
+To take continuous screenshots
+To start taking continuous screenshots, press ‘S‘; press ‘S‘ again to stop.
+
+Remember to stop it, otherwise mplayer will keep taking screenshots.
+
+Screenshots will be stored under the current directory with name “shot00001.png”, “shot00002.png”, and so on.
+
+That’s quite easy, right? Then enjoy it~
