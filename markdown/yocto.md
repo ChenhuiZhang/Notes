@@ -19,3 +19,9 @@ either:
 2. dependencies
 
 bitbake -g recipe-name -u taskexp
+
+3. Enable debug
+
+Add below in local.conf or recipie
+
+DEBUG_BUILD_pn-audiocontrol = "1"
