@@ -101,3 +101,6 @@ Remember to stop it, otherwise mplayer will keep taking screenshots.
 Screenshots will be stored under the current directory with name “shot00001.png”, “shot00002.png”, and so on.
 
 That’s quite easy, right? Then enjoy it~
+
+# Calculate the PI
+echo "scale=10000; 4*a(1)" | bc -l  // tan(PI/4) = 1 => PI = 4*atan(1)
