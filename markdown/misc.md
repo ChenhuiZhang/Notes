@@ -104,3 +104,21 @@ That’s quite easy, right? Then enjoy it~
 
 # Calculate the PI
 echo "scale=10000; 4*a(1)" | bc -l  // tan(PI/4) = 1 => PI = 4*atan(1)
+
+# Mesure the http response time
+
+```
+curl --noproxy "*" -w "@curl-format" -o NUL -s http://192.168.77.147/onvif/device_service -d '<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetCapabilities xmlns="http://www.onvif.org/ver10/device/wsdl"><Category>All</Category></GetCapabilities></s:Body></s:Envelope>'
+```
+
+```
+chenhuiz@lnxchenhuiz2:~/work/ttl$ cat curl-format
+   1     time_namelookup:  %{time_namelookup}\n
+   2        time_connect:  %{time_connect}\n
+   3     time_appconnect:  %{time_appconnect}\n
+   4    time_pretransfer:  %{time_pretransfer}\n
+   5       time_redirect:  %{time_redirect}\n
+   6  time_starttransfer:  %{time_starttransfer}\n
+   7                     ----------\n
+   8          time_total:  %{time_total}\n
+```
