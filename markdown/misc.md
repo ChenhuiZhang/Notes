@@ -122,3 +122,8 @@ chenhuiz@lnxchenhuiz2:~/work/ttl$ cat curl-format
    7                     ----------\n
    8          time_total:  %{time_total}\n
 ```
+
+# Print the caller in kernel
+```
+printk("Caller is %pS\n", __builtin_return_address(0));
+```
